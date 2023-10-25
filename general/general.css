@@ -1,0 +1,331 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "LemonM";
+    src: url(../fonts/LEMONMILK-Regular.otf);
+}
+
+@font-face {
+    font-family: "Montserrat SemiBold" ;
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+
+:root {
+    --font-size: 1rem;
+    line-height: 1.35;
+}
+
+h1 {
+    font-size: calc(8 * var(--font-size));
+    font-family: "LemonM";
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: calc(2 * var(--font-size));
+    font-family: "LemonM";
+}
+
+h3 {
+    font-size: calc(2 * var(--font-size));
+    font-family: "Montserrat";
+}
+
+p, a {
+    font-size: calc(1.1 * var(--font-size));
+    font-family: "Montserrat";
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-right: 2rem;
+    z-index: 99;
+}
+
+header a {
+    font-family: "LemonM";
+}
+
+header > div:last-child img {
+    height: 3.8rem;
+}
+
+nav div:first-child {
+    font-size: 35px;
+    padding: 0.5rem 1rem;
+    cursor: pointer; 
+    transition: transform 0.3s ease; 
+    color: white;
+}
+
+nav div:first-child:hover {
+    transform: scale(1.2); 
+}
+
+nav,
+.dropdown-content > div {
+    position: relative;
+    z-index: 98;
+}
+
+.dropdown-content {
+    border-radius: 0 0 10px 0;
+}
+
+.dropdown-content, 
+.container-dropdown-content-one {
+    background-color: rgba(10, 10, 10, 0.95);
+    width: 15rem;
+    max-height: 50rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    display: none;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.3rem;
+    padding: 1.6rem;
+    color: white;
+    transition: background-color 0.15s ease, color 0.15s ease, font-size 0.15s ease; 
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(157, 157, 157, 0.158); 
+    color: rgb(241, 241, 241);
+    font-size: 1.4rem;
+}
+
+.container-dropdown-content-one {
+    left: 239px;
+    top: 0;
+    border-radius: 0 10px 10px 0;
+}
+  
+nav:hover .dropdown-content,
+.dropdown-content > div:hover .container-dropdown-content-one {
+    display: block;
+} 
+/* End of Header */ 
+
+
+/* Footer */
+footer div a img {
+    height: 2vw;
+    width: 2vw;
+}
+
+footer {
+    background-color: #2a2a2a;
+    height: 18vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 14vw 4vw;
+}
+
+footer div ul {
+    list-style: none; 
+    display: grid;
+    row-gap: 0.5vw;
+    margin-top: 2.5vw;
+    font-size: 1vw;
+    grid-template-columns: 8vw;
+    grid-template-rows: 2vw 2vw 2vw;
+    
+}
+
+footer > div:last-of-type ul {
+    grid-template-columns: 2vw 2vw;
+    grid-gap: 1vw;
+}
+
+footer div a {
+    color: white;
+    font-size: calc(0.9 * var(--font-size));
+}
+
+footer div h4 {
+    color: white;
+    font-family: "LemonM";
+    text-decoration: underline;
+    text-underline-offset: 0.4vw;
+    text-decoration-thickness: 0.1vw;
+    letter-spacing: 0.2vw;
+    font-size: 1vw;
+}
+ 
+footer div ul li a {
+    text-decoration: none;
+    font-family: "Montserrat";
+}
+
+footer div {
+   display: flex;
+   flex-direction: column;
+   margin-top: 2.5vw;
+   justify-self: center;
+}
+
+footer div > div {
+    display: flex;
+    gap: 1vw;
+    flex-direction: row;
+}
+
+footer > a > img {
+    height: 10vw;
+    width: 10vw;
+    margin: 2vw;
+}
+
+footer p {
+    color:white;
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: center;
+    align-self: end;
+    font-family: "Montserrat";
+    font-size: 0.8vw;
+    padding-bottom: 0.8vw;
+}
+
+footer > div:last-of-type{
+    grid-column: 5;
+}
+
+footer > div:nth-of-type(2) {
+    grid-column: 4;
+}
+
+footer > div:first-of-type {
+    grid-column: 3;
+}
+/* End of Footer */
+
+@media (width <= 500px) {
+    .top h1 {
+        font-size: 11vw;
+        text-align: center;
+        margin: 0;
+        padding-top: 18rem;
+    }
+
+    div h1 {
+        font-size: 13vw;
+        text-align: center;
+        margin: 0;
+        padding-top: 2rem;
+    }
+
+    .dropdown-content, 
+    .container-dropdown-content-one {
+        width: 50vw;
+    }
+
+    .container-dropdown-content-one {
+        left: 50vw;
+    }
+
+    footer {
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 42.5vw 32.5vw 10vw;
+        height: 86vw;
+    }
+
+    footer > div:last-of-type {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        margin-bottom: 10vw;
+    }
+
+    footer > a > img {
+        height: 30vw;
+        width: 30vw;
+        margin-left: 8vw;
+    }
+
+    footer > img {
+        grid-row: 1;
+        grid-column: 1;
+        height: 25vw;
+        width: 25vw;
+        margin: 5vw 9vw;
+    }
+
+    footer > div:last-of-type ul {
+        display: flex;
+        justify-content: center;
+        gap: 4vw;
+        margin-top: 3vw;
+    }
+
+    footer div a img {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    footer > div:first-of-type {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    footer div:first-of-type ul {
+       grid-template-columns: 30vw;
+       grid-template-rows: 6vw 6vw 6vw;
+       font-size: 3.5vw;
+       gap: 2vw;
+       margin-top: 3vw;
+    }
+
+    footer > div:nth-of-type(2) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    footer div:nth-of-type(2) ul {
+        grid-template-columns: 30vw;
+        grid-template-rows: 6vw 6vw;
+        font-size: 3.5vw;
+        gap: 2vw;
+        margin-top: 3vw;
+    } 
+    
+    footer div h4 {
+        font-size: 4vw;
+        text-underline-offset: 1.5vw;
+        letter-spacing: 0.4vw;
+        text-decoration-thickness: 0.4vw;
+        font-weight: normal;
+    }
+
+    footer p {
+        grid-row: 3;
+        grid-column: 1 / 3;
+        font-size: 2.5vw;
+        padding-bottom: 1.5vw;
+    }
+}
+

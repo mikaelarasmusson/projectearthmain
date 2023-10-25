@@ -1,0 +1,673 @@
+.landing-page {
+    height: 100vh;
+}
+
+body {
+    background-color: #111110;
+}
+
+h1 {
+    font-size: calc(8 * var(--font-size));
+    font-family: "LemonM";
+}
+
+h2, span {
+    margin-top: 0;
+    font-size: calc(2 * var(--font-size));
+    font-family: "LemonM";
+}
+
+h3 {
+    font-size: calc(2 * var(--font-size));
+    font-family: "Montserrat";
+}
+
+p, a {
+    font-size: calc(1.1 * var(--font-size));
+    font-family: "Montserrat";
+}
+
+/* Video */
+.video-box {
+    position: relative;
+    height: 94vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+video:nth-of-type(1) {
+    display: block;
+}
+
+video:nth-of-type(2) {
+    display: none;
+}
+
+h1 {
+    position: absolute;
+    top: 35%;
+    left: 4%;
+    z-index: 90;
+    margin: 0;
+    color: #F1F1EE;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+hr {
+   border: 1.5px solid white;
+}
+
+/*   LOOOP  TEXT   */
+
+@keyframes looptxt {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.text-loop-container {
+    overflow: hidden;
+    padding: 2px 0;
+    background-color: black;
+    white-space: nowrap;
+   
+}
+
+.text-loop-container:hover .text-loop {
+    animation-play-state: paused;  /*  man kan pausa loop texten när man hovrar över. är rätt nice! */
+}
+
+.text-loop {
+    display: inline-block;  /*  löpande text loop hamnar på en rad  */
+    animation: 150s looptxt infinite linear;
+    border-top: 2px dotted white;
+    border-bottom: 2px dotted white;
+  
+}
+
+.text-loop p {
+    font-size: 20px;
+    font-family: "LemonM";
+    color: white;
+    padding: 10px 0 7px 0;
+}
+
+
+/* Middle */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-one {
+    display: flex;
+    flex-direction: column;
+    background-color: #252525;
+    width: 75%;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#container-one span {
+    font-style: italic;
+    font-family: "LemonM";
+    border-bottom: 3px solid #E53D00;
+}
+
+#container-one h2 {
+    color: #F1F1EE;
+    font-family: "LemonM";
+    padding: 10px;
+    margin: 20px 20px 0px 20px;
+}
+
+#container-one p {
+    color: #F1F1EE;
+    font-family: "Montserrat";
+    padding: 10px;
+    margin: 5px 20px 5px 20px;
+    width: 90%;
+}
+
+#container-one .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#container-one .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+    position: relative;
+}
+
+#container-one .right p {
+    text-align: right;
+}
+
+#container-two section {
+    color: #F1F1EE;
+}
+
+#container-two section:nth-child(1) {
+    background-color:#252525;
+    margin: 60px auto 120px auto;
+    padding: 30px;
+    width: 75%;
+    display: flex;
+    transition: 0.3s;
+}
+
+#container-two section:hover {
+    transform: scale(1.05);
+}
+
+#container-two section:nth-child(1) img {
+    height: 200px;
+    width: 300px;
+    position: relative;
+    left: -50px;
+}
+
+#container-two section:nth-child(1) h2,
+#container-two section:nth-child(1) p {
+    position: relative;
+    left: -30px;
+    top: 20px;
+}
+
+#container-two section:nth-child(1) p {
+    padding-bottom: 20px;
+}  
+
+#container-two section:nth-of-type(2) {
+    margin:  0px auto;
+    background-color:#252525;
+    padding: 30px;
+    width: 75%;
+    display: flex;
+    flex-direction: row-reverse;
+    transition: 0.3s;
+}
+
+#container-two section:nth-of-type(2) img {
+    height: 200px;
+    width: 300px;
+    position: relative;
+    right: -50px;  
+}
+
+#container-two section:nth-of-type(2) h2 {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    right: -30px;
+    top: 30px;
+}
+
+#container-two section:nth-of-type(2) p {
+    text-align: right;
+    position: relative;
+    right: -30px;
+    top: 30px;
+    padding-bottom: 20px;
+}
+
+#container-two section:nth-child(3) {
+    background-color:#252525;
+    margin:  120px auto 60px auto;
+    padding: 30px;
+    width: 75%;
+    display: flex;
+    transition: 0.3s;
+}
+
+#container-two section:nth-child(3) img {
+    height: 200px;
+    width: 300px;
+    position: relative;
+    left: -50px;
+}
+
+#container-two section:nth-child(3) h2 {
+    position: relative;
+    left: -30px;
+    top: 20px;
+}
+
+#container-two section:nth-child(3) p {
+    position: relative;
+    left: -30px;
+    top: 20px;
+    padding-bottom: 20px;
+}
+
+article {
+    color: #F1F1EE;
+}
+
+article > section {
+    height: auto;
+    margin-top: 30px;
+    background-color: #252525 ;  
+    
+}
+
+article > h2:first-child {
+    width: 75%;
+    margin: 70px auto 70px 120px;
+}
+
+article > section div:first-child {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    width: 60%;
+}
+
+article > section div:nth-child(1) img {
+    max-width:100%;
+    height: 120px;
+    float: left;
+    margin-right: 20px;
+}
+
+article > section div:nth-child(3) img {
+    max-width:100%;
+    height: 140px;
+    float: left;
+    margin-right: 20px;
+}
+
+article > h2 {
+    margin-top: -5px;
+    max-width: 600px;
+}
+
+article > p {
+    max-width: 100%;
+}
+
+article > section div:nth-child(3) {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 40px 90px 40px;
+    width: 60%;
+}
+
+article > h2:nth-child(3) {
+    display: flex;
+    justify-content: flex-end;
+    margin: 70px 120px 70px auto;
+    margin-top: 70px;
+    width: 75%;
+    margin-bottom: 80px;
+}
+
+article > section > hr {
+    width: 30%;
+    margin: 10px auto;
+    border: none;
+    border-bottom: 2px solid #F1F1EE61;
+}
+
+/*Footer*/
+footer div a img {
+    height: 2vw;
+    width: 2vw;
+}
+
+footer {
+    background-color: #2a2a2a;
+    height: 18vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 14vw 4vw;
+}
+
+footer div ul {
+    list-style: none; 
+    display: grid;
+    row-gap: 0.5vw;
+    margin-top: 2.5vw;
+    font-size: 1vw;
+    grid-template-columns: 8vw;
+    grid-template-rows: 2vw 2vw 2vw;
+    
+}
+
+footer > div:last-of-type ul {
+    grid-template-columns: 2vw 2vw;
+    grid-gap: 1vw;
+}
+
+footer div a {
+    color: white;
+}
+
+footer div h4 {
+    color: white;
+    font-family: "LemonM";
+    text-decoration: underline;
+    text-underline-offset: 0.4vw;
+    text-decoration-thickness: 0.1vw;
+    letter-spacing: 0.2vw;
+    font-size: 1vw;
+}
+ 
+footer div ul li a {
+    text-decoration: none;
+    font-family: "Montserrat";
+}
+
+footer div {
+   display: flex;
+   flex-direction: column;
+   margin-top: 2.5vw;
+   justify-self: center;
+}
+
+footer div > div {
+    display: flex;
+    gap: 1vw;
+    flex-direction: row;
+}
+
+footer > img {
+    height: 10vw;
+    margin: 2vw;
+}
+
+footer p {
+    color:white;
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: center;
+    align-self: end;
+    font-family: "Montserrat";
+    font-size: 0.8vw;
+    padding-bottom: 0.8vw;
+}
+
+footer > div:last-of-type{
+    grid-column: 5;
+}
+
+footer > div:nth-of-type(2) {
+    grid-column: 4;
+}
+
+footer > div:first-of-type {
+    grid-column: 3;
+}
+
+/*Media queries header */
+@media (width <= 500px) {
+    .dropdown-content, 
+    .container-dropdown-content-one {
+        width: 50vw;
+    }
+
+    .container-dropdown-content-one {
+        left: 50vw;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 890px) {
+    h1 {
+        font-size: 72px;
+    }
+}
+
+@media (min-width: 370px) and (max-width: 500px) {
+    .text-loop-container {
+        margin: 0;
+    }
+
+    .text-loop p {
+        font-size: calc(var(--font-size) * 1.1);
+    }
+
+
+    video:nth-of-type(1) {
+        display: none;
+        width: 94vh;
+    }
+
+    video:nth-of-type(2) {
+        display: block;
+    }
+
+    h1 {
+        font-size: 13vw;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+/* Media queries middle */
+@media (max-width:500px) {
+    
+    #container-two section:nth-child(1) {      
+        width: 300px;
+        margin: 60px auto 30px auto;
+        flex-direction: column;
+    }
+
+    #container-two section:nth-child(1) div:nth-child(1),
+    #container-two section:nth-child(3) div:nth-child(1) {
+        position: relative;
+        width: 260px;
+        left: 5px;
+    }
+
+    #container-two section:nth-child(1),
+    #container-two section:nth-of-type(2),
+    #container-two section:nth-child(3) {
+        height: auto; 
+    }
+
+    #container-two section:nth-child(1) img,
+    #container-two section:nth-of-type(2) img,
+    #container-two section:nth-child(3) img {
+        margin-bottom: 10px;
+        width: 330px;
+    }
+
+    #container-two section:nth-child(1) h2,
+    #container-two section:nth-child(3) h2 {
+        position: relative;
+        left: 0px;
+        padding-left:0px;
+        top: 0;
+        margin-bottom: 10px;
+    }
+  
+    #container-two section:nth-child(1) p,
+    #container-two section:nth-child(3) p {
+        position: relative;
+        left:0px;
+        padding-left: 0px;
+        top: 0px;
+    }
+
+    #container-two section:nth-of-type(2) {
+        width: 300px;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    section:nth-of-type(2) div:nth-child(1) {
+        position: relative;
+        width: 260px;
+        right: 94px;
+    }
+    
+    #container-two section:nth-of-type(2) h2 { 
+        display: block;
+        position: relative;
+        left: 0px;
+        padding-right: 0;
+        top: 0;
+        margin-bottom: 10px;
+    }
+
+    #container-two section:nth-of-type(2) p {
+        text-align:left;
+        position: relative;
+        left: 0px;
+        padding-right: 0;
+        top: 0;
+    }
+
+    #container-two section:nth-child(3) {
+        width: 300px;
+        margin: 30px auto 60px auto;
+        flex-direction: column;
+    }
+
+    #container-one .right p {
+        text-align: left;
+    }
+    
+    article > h2:first-child{
+        font-size: 20px;
+        margin: 20px auto 80px auto;
+        max-width: 200px;
+        text-align: center;
+    }
+    
+    article section h2:first-child {
+        font-size: 20px;
+        margin: 20px auto 10px auto;
+        max-width: 200px;
+        text-align: center;
+    }
+
+  
+
+    article >section div:nth-child(1) img,
+    article >section div:nth-child(3) img {
+        float: none;
+        width: 70%;
+        margin: 0 60px;
+    } 
+
+     article > section h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    article section div:first-child,
+    article section div:nth-child(3) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    article h2:nth-child(3) {
+        font-size: 20px;
+        margin: 80px 2vw 80px 32vw;
+        max-width: 200px;
+        
+        }
+}        
+
+/* Media queries footer */
+@media (max-width: 500px) {
+
+    footer {
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 42.5vw 32.5vw 10vw;
+        height: 86vw;
+    }
+
+    footer > div:last-of-type {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        margin-bottom: 10vw;
+    }
+
+    footer > img {
+        grid-row: 1;
+        grid-column: 1;
+        height: 25vw;
+        margin: 5vw 9vw;
+    }
+
+    footer > div:last-of-type ul {
+        display: flex;
+        justify-content: center;
+        gap: 4vw;
+        margin-top: 3vw;
+    }
+
+    footer div a img {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    footer > div:first-of-type {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    footer div:first-of-type ul {
+       grid-template-columns: 30vw;
+       grid-template-rows: 6vw 6vw 6vw;
+       font-size: 3.5vw;
+       gap: 2vw;
+       margin-top: 3vw;
+    }
+
+    footer > div:nth-of-type(2) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    footer div:nth-of-type(2) ul {
+        grid-template-columns: 30vw;
+        grid-template-rows: 6vw 6vw;
+        font-size: 3.5vw;
+        gap: 2vw;
+        margin-top: 3vw;
+    } 
+    
+    footer div h4 {
+        font-size: 4vw;
+        text-underline-offset: 1.5vw;
+        letter-spacing: 0.4vw;
+        text-decoration-thickness: 0.4vw;
+        font-weight: normal;
+    }
+
+    footer p {
+        grid-row: 3;
+        grid-column: 1 / 3;
+        font-size: 2.5vw;
+        padding-bottom: 1.5vw;
+    }
+}
+
+
+
+
+
+
+
+
+  
